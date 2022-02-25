@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        
         *{margin: auto;
-        padding: 0px;}
+        padding: 0px;
+        box-sizing: border-box;}
         .wapper{
             height: 700px;
             width: 1089px;
-            background-color: rgb(196, 207, 35);
+            background-color: blue;
             text-align: center;
         }
         header{
@@ -34,9 +36,17 @@
         }
         aside{
             height: 100%;
-            width: 70%;
-            background-color: rgb(94, 30, 11);
-            text-align: center;
+            width: 35%;
+            padding: 0;
+            background-color: rgb(155, 32, 100);
+            margin-right: 0% ;
+        }
+        article{
+        float: left;
+        width: 30%;
+        background-color: #f1f1f1;
+        height: 100%;
+        padding: 0px;
         }
         footer{
             height: 150px;
@@ -49,31 +59,12 @@
 </head>
 <body>
     <div class="wrapper">
-       <header>
-           <h1>My</h1>
-       </header>
+       <header></header>
        <nav>
-           <h1>you</h1>
        </nav>
        <div class="content">
-           <aside>
-               <h1>My First Heading</h1>
-               <p>My first paragraph</p>
-               <h1>The input element</h1>
-
-            <form action="/action_page.php">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <input type="submit" value="Submit">
-            </form>
-
-<p>Click the "Submit" button and the form-data will be sent to a page on the 
-server called "action_page.php".</p>
-
-           </aside>
-           <section></section>
+           <article></article>
+           <aside></aside>
        </div>
        <footer></footer>
     </div>
