@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #tbl1 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #tbl1 th, #tbl1 td{
+            border-bottom: 1px solid red;
+            height: 30px;
+            padding-left: 5px;
+        }
+
+        #tbl1 th{
+            background-color: gray;
+            color: white;
+        }
+
+        /* #tbl1 tbody td:nth-child(1),
+        #tbl1 tbody td:nth-child(2){
+            background-color: blue;
+        } */
+
+        /* #tbl1 tbody td:last-child{
+            background-color: blueviolet;
+        } */
+
+        /* #tbl1 tbody tr:first-child {
+            background-color: yellow;
+        } */
+
+        #tbl1 tbody tr:nth-child(2n+1){
+            background-color: gainsboro;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- table>caption+(thead>tr>th)+(tbody>(tr>td*5)*9)+tfoot>tr>td*5 -->
+
+    <table id="tbl1">
+        <caption>Empoyee Information</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lan</td>
+                <td>Nguyen</td>
+                <td>20</td>
+                <td>lan@gmail.com</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
