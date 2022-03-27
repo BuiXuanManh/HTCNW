@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        #wrapper{
+            width: 960px;
+        }
+        #header{
+            height: 60px;
+            background-color: rgb(107, 196, 238);
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            border-bottom:5px dotted white;
+        }
+        #header h1{
+            position: absolute;
+            top: 5px;
+            right:10px;
+            text-shadow: 5px 5px 20px blue, -5px -5px 20px blue,-5px 5px 20px blue,-5px -5px 20px blue ;
+        }
+        .menu{
+            position: absolute;
+            display: flex;
+            list-style: none;
+            left: 10px;
+            bottom: 0;
+        }
+        .menu a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+        .menu2{
+            display: none;
+            list-style: none;
+            background-color: rgb(107, 196, 238);
+        }
+        .menu a:hover{
+            color: red;
+            background-color: aqua;
+        }
+        .menu :hover .menu2{
+            display: block;
+            position: absolute;
+            left: 215px;
+        }
+        #left{
+            width: 50%;
+            background-color: rgb(107, 196, 238) ;
+            float: left;
+            padding: 20px;
+        }
+        #left h3{
+            margin-top: 10px;
+        }
+        button{
+            color: black;
+        }
+        .cot{
+            float: left;
+            width: 40%;
+        }
+        .dong{
+            clear: both;
+        }
+        #left button, #left input, #left textarea{
+            border-radius: 5px ; 
+            border: 1px solid rgb(30, 28, 172);
+            color: black;
+        }
+        #left :last-child button {
+            border: 1px dashed rgb(30, 28, 172);
+        }
+        #left input::-webkit-input-placeholder, #left textarea::-webkit-input-placeholder{
+            color: rgb(192, 185, 185);
+        }
+        #right img{
+            margin-top: 30px;
+        }
+        #right h2{
+            font-family:'Times New Roman', Times, serif;
+            text-shadow:  0px 4px 3px rgb(85, 63, 136),
+            1px 10px 18px rgba(250, 241, 241,0),
+            1px 10px 18px rgba(255, 255, 255,0);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        #right h2, #right p{
+            margin-left: 30px;
+            color: blue;
+            font-weight: bold;
+        }
+        #right{
+            width: 50%;
+            background-color: rgb(107, 196, 238);
+            float: left;
+            padding: 20px;
+        }
+        #content{
+            background-color: rgb(107, 196, 238);
+            width: 100%;
+            float: left;    
+            border-bottom:5px dotted white; 
+        }
+        #footer {
+            display: block;
+            clear: both;
+            text-align: center;
+            background-color: rgb(107, 196, 238);
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Sky World</h1>
+            <ul class = "menu">
+                <li><a href=""> Home</a></li>
+                <li><a href=""> Products</a></li>
+                <li><a href=""> Services</a>
+                    <ul class="menu2">
+                        <li><a href="">International Tours</a></li>
+                        <li><a href="">Local Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href=""> About</a></li>
+                <li><a href=""> Contacts</a></li>
+            </ul>
+        </div>
+        <div id="content">
+        <div id="left">
+            <h3>Registration information</h3>
+            <p>It is our nature which has gifted us such beautiful colours and as a result, the sky looks blue, the environment looks green, etc. All these things look like a miracle but are part of science. Nowadays due to pollution, we cannot see the original beauty of colour in our environment. It's our duty to protect our nature and earth.</p>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtT">Title</label>
+                </div>
+                <div class="cot">
+                <button type="button" id="txtT">Mr. &#x25BC;</button>
+            </div>
+            </div>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtName">FullName*</label>
+            </div>
+            <div class="cot">
+                <input type="text" id="txtName" placeholder="FirstName">
+            </div>
+            </div>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtMail">Meiling Address</label>
+            </div>
+            <div class="cot">
+                <input type="text" id="txtMail" placeholder="Mailing Address">
+            </div>
+            </div>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtCity">City</label>
+            </div>
+            <div class="cot">
+                <input type="text" id="txtCity" placeholder="City"><br>
+            </div>
+            </div>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtC" >Country</label>
+            </div>
+            <div class="cot">
+                <input type="text" id="txtC" placeholder="Country"><br>
+            </div>
+            </div>
+            <div class="dong">
+                <div class="cot">
+                <label for="txtMessage">Specific question or request about your tour</label>
+            </div>
+            <div class="cot">
+                <textarea  id="textMessage" cols="20" rows="10" placeholder="Specific question or request about your tour"></textarea><br>
+                <button type="Submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            </div>
+        </div>
+        <div id="right">
+            <img src="../code/logo/anh.PNG" alt="">
+            <h2>You've aririved.</h2>
+            <p>Journeys as great as the destinations</p>
+        </div>
+    </div>
+        <div id="footer">
+            <h4 >you'll realize that Mac was everyone's hero.</h4>
+            <p>this man was transforming his music to something unheard of, pure genius.</p>
+        </div>
+    </div>
+</body>
+</html>

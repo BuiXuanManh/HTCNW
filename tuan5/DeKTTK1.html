@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        #wrapper{
+            width: 960px;
+        }
+        #header{
+            height: 50px;
+            background-color: rgb(107, 196, 238);
+            position: relative;
+            border-bottom: 5px dotted white ;
+        }
+        .menu{
+            position: absolute;
+            display: flex;
+            list-style: none;
+            left: 10px;
+            bottom: 5px;
+        }
+        .menu a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .menu2{
+            display: none;
+            background-color: aquamarine;
+        }
+        .menu a:hover{
+            background-color: aqua;
+            color: red;
+        }
+        .menu :hover .menu2{
+            display: block;
+            position: absolute;
+        }
+        #header h1{
+            position: absolute;
+            text-shadow: 2px 2px 5px blue,-2px -2px 5px blue,-2px 2px 5px blue,2px -2px 5px blue;
+            bottom: 5px;
+            right: 10px;
+        }
+        #content{
+            width: 100%;
+            background-color: rgb(107, 196, 238);
+            padding-top: 10px;
+            float: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 5px dotted white;
+        }
+        #left{
+            float: left;
+            width: 48%;
+            padding-left: 2%;
+        }
+        #left h2{
+            font-family: 'Comic Sans';
+            text-shadow: 2px 2px 0px rgba(236, 229, 229, 0.7),
+            -2px -2px 0px rgba(236, 229, 229, 0.7),-2px 2px 0px rgba(236, 229, 229, 0.1),2px -2px 0px rgba(236, 229, 229, 0.7);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        #right{
+            float: left;
+            width: 48%;
+            padding-left: 2%;
+        }
+        .cot{
+            float: left;
+            width: 50%;
+        }
+        .dong{
+            clear: both;
+        }
+        input, button, textarea{
+            border-radius:5px ;
+            border: 1px solid blue;
+            color: black;
+        }
+        input, textarea{
+            width: 200px;
+        }
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+            color: rgb(201, 197, 197);
+        }
+        #right:last-child button{
+            border: 1px dashed blue;
+        }
+        #footer{
+            clear: both;
+            background-color: rgb(107, 196, 238);
+            padding-top: 30px;
+            text-align: center;
+        }
+        .table{
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Blue World</h1>
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a>
+                    <ul class="menu2">
+                        <li><a href="">Product Development</a></li>
+                        <li><a href="">Product Maketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="left">
+                <img src="../code/logo/anh.PNG">
+                <h2>Happiness on Earth.</h2>
+                <p>inspiring destinations within your reach.</p>
+            </div>
+            <div id="right">
+                <h3>Your contact information</h3>
+                <p> A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</p>
+                <div class="table">
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtT">Title</label>
+                        </div>
+                        <div class="cot">
+                            <button type="button" id="txtT">Mr. &#x25BC;</button>
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtName">Full Name*</label>
+                        </div>
+                        <div class="cot">
+                            <input type="text" id="txtName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtMail">Mailing Address</label>
+                        </div>
+                        <div class="cot">
+                            <input type="text" id="txtMail" placeholder="Mailing Address">
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtCity">City</label>
+                        </div>
+                        <div class="cot">
+                            <input type="text" id="txtCity" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtC">Country</label>
+                        </div>
+                        <div class="cot">
+                            <input type="text" id="txtC" placeholder="Country">
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <div class="cot">
+                            <label for="txtM">Specific question or request about your tour</label>
+                        </div>
+                        <div class="cot">
+                            <textarea  id="txtM" cols="20" rows="10" placeholder="Specific question or request about your tour"></textarea><br>
+                            <button>Sunmit</button>
+                            <button>Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h4 >you'll realize that Mac was everyone's hero.</h4>
+            <p>this man was transforming his music to something unheard of, pure genius.</p>
+        </div>
+    </div>
+</body>
+</html>

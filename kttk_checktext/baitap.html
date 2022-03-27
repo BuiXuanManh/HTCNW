@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lý thuyết/HUONG DAN BOOTSTRAP/js/jquery-3.5.1.min.js"></script>
+    <script src="../lý thuyết/HUONG DAN BOOTSTRAP/js/bootstrap.min.js"></script>
+    <style>
+        *{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    width: 960px;
+    position: relative;
+}
+#text{
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+}
+.menu{
+    display: flex ;
+    list-style: none;
+    position: absolute;
+    top:5px;
+}
+.menu a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+.menu2{
+    display: none;
+    list-style: none;
+}
+.menu a:hover{
+    color: red;
+    background-color: aqua;
+}
+.menu :hover .menu2{
+    display: block;
+    position: absolute;
+}
+#content{
+    width: 100%;
+    background-color: white;
+}
+#left{
+    width: 25%;
+    float: left;
+}
+h2{
+    margin-bottom: 3px;
+}
+table,th,td{
+    border: 1px outset rgb(255, 253, 253);
+    border-collapse: collapse;
+}
+#form{   
+    opacity: 1;
+    display: none;
+    position: absolute;
+    bottom: 200px;
+    left: 700px;
+    background-color: white;
+    border: 1px outset bisque ;
+    padding: 10px 10px 10px 10px;
+}
+.button{
+    margin: 10 10px 10px 0; 
+    background-color: violet;
+    width: 300px;
+}
+.form-control{
+    width: 300px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+        <img src="../lý thuyết/HUONG DAN BOOTSTRAP/Images/Banner.png">
+        </div>
+        <div id="text">
+                <ul class="menu">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SHOP</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">ARTICLE</a></li>
+                    <li><a href="">SERVICES &#x25BC;</a> 
+                        <ul class="menu2">
+                            <li><a href="">Online</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+        <div id="content">
+        <div id="left">
+            <img src="../lý thuyết/HUONG DAN BOOTSTRAP/Images/left.png" style="width: 100%;">
+        </div>
+        <div id="right">
+            <h2 style="color: red; text-align: center; padding-top: 50px;">Customer Ordered List</h2>
+            <table class="table" width="60%">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Delivery</th>
+                    <th>Email</th>
+                    <th>Telephone number</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="form" >
+<div class="form-group">
+    <h2 style="color: red;">Customer information</h2>
+    <label for="txtTen" class="control-label col-md-3">Customer Name</label>
+    <div class="col-md-12">
+        <input type="text" class="form-control" id="txtTen">
+        <span id="tbTen" class="text-danger">*</span>
+    </div>
+</div>
+<div class="form-group">
+    <label for="txtDC" class="control-label col-xs-3">Address</label>
+    <div class="col-md-12">
+        <input type="text" class="form-control" id="txtDC">
+        <span id="tbDC" class="text-danger">*</span>
+</div>
+<div class="form-group">
+    <label for="txtNgay" class="control-label col-xs-3" >Delivery Date</label>
+    <div class="col-md-12">
+        <input type="text" class="form-control" id="txtNgay" placeholder="dd/mm/yy">
+        <span id="tbNgay" class="text-danger">*</span>
+</div>
+<div class="form-group">
+    <label for="txtMail" class="control-label col-xs-3">Email</label>
+    <div class="col-md-12">
+        <input type="text" class="form-control" id="txtMail">
+        <span id="tbMail" class="text-danger">*</span>
+</div>
+<div class="form-group">
+    <label for="txtSDT" class="control-label col-xs-3">Telephone number</label>
+    <div class="col-md-12">
+        <input type="text" class="form-control" id="txtSDT">
+        <span id="tbSDT" class="text-danger">*</span>
+</div>
+<div class="form-group">
+    <button class="button">Save</button>
+</div>
+<script>
+    var i=1;
+    $("myBtn").click(function(){
+        $("myModal").modol();
+    });
+    function KTTen(){
+        var kt=/^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+        if ($("#txtTen").val()=="") {
+            $("#tbTen").html("* bắt buộc nhập");
+            return false;
+        } 
+        if(!kt.test($("#txtTen").val())){
+            $("#tbTen").html("* Chữ cái đầu của mỗi từ phải viết hoa!!");
+            return false;
+        }
+        $("#tbTen").html("*");
+        return true;
+    }
+    $("#txtTen").blur(KTTen);
+    function KTDC(){
+        if($("#txtDC").val()==""){
+            $("#tbDC").html("* Bắt buộn nhập");
+            return false;
+        }
+        $("#tbDC").html("*");
+        return true;
+    }
+    $("#txtDC").blur(KTDC);
+    function KTNgay(){
+        if($("#txtNgay").val()==""){
+            $("#tbNgay").html("* Bắt buộc nhập");
+            return false;
+        }
+        var day= new Date($("#txtNgay").val());
+        var today= new Date;
+        today.setDate(today.getDate()+3);
+        if(day<today){
+            $("#tbNgay").html("* Nhập ngày sau ngày hiện tại 3 ngày");
+            return false;
+        }
+        $("#tbNgay").html("*");
+        return true;
+    }
+    $("#txtNgay").blur(KTNgay);
+    function KTSDT(){
+        var sdt=/^[0-9]{3}\-d{4}\-\d{3}$/;
+        if($("#txtSDT").val()==""){
+            $("#tbSDT").html("* Bắt buộn nhập");
+            return false;
+        }
+        if(!sdt.test($("#txtSDT").val())){
+            $("#tbSDT").html("Nhập theo dạng 000-0000-0000")
+        }
+        $("#tbSDT").html("*");
+        return true;
+    }
+    $("#txtSDT").blur(KTSDT);
+    function KTMail(){
+        var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+(\.\w{2,3})+$/;
+        if($("#txtMail").val()==""){
+            $("#tbMail").html("* Bắt buộn nhập");
+            return false;
+        }
+        if(!sdt.test($("#txtMail").val())){
+            $("#tbMail").html("Nhập đúng định dạng mail")
+        }
+        $("#tbMail").html("*");
+        return true;
+    }
+    $("#txtMail").blur(KTMail);
+    $("#btnSave").click(function(){
+        if(!KTTen()||!KTDC()||!KTMail||!KTSDT||!KTNgay()){
+            $("#thongbao").html("* Nhập đúng và đủ thông tin");
+            return false;
+        }
+        var ten=$("#txtTen").val();
+        var diachi= $("#txtDC").val();
+        var ngay=$("#txtNgay").val();
+        var gmail=$("#txtMail").val();
+        var sdt=$("#txtSDT").val();
+        var them="<tr><td>"+(i++)+"</td><td>"+ten+"</td><td>"+diachi+"</td><td>"+ngay+"</td><td>"+gmail+"</td><td>"+sdt+"</td><td>";
+        $("table").append(them);
+        $("myModal").modal("hide");
+    })
+    window.onclick = f;
+    function f(){
+        document.getElementsByTagName("BODY")[0].style.background='rgba(128, 117, 117,0.5)';
+        document.getElementById("header").style.opacity='0.5';
+        document.getElementById("text").style.opacity='0.5';
+        document.getElementById("content").style.opacity='0.5';
+        document.getElementById("form").style.display='block';
+    }
+</script>
+</div>
+</body>
+</html>
